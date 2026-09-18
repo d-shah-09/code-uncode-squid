@@ -9807,31 +9807,74 @@ a {
 --------------------------------------------------------- */
 
 .player-contract-rules {
-  width: 100%;
   height: 100%;
 
-  padding: 7% 0 3.5%;
+  padding: 4% 0 3%;
 
   display: grid;
-
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(2, minmax(0, 1fr)) auto auto;
 
-  grid-template-rows: auto auto auto auto;
+  column-gap: 24px;
+  row-gap: 18px;
 
-  column-gap: 38px;
-  row-gap: 34px;
-
-  align-content: start;
-
-  position: relative;
-
-  z-index: 5;
+  align-content: center;
 }
 
 /* ---------------------------------------------------------
    PAPER CARDS
 --------------------------------------------------------- */
+.player-contract-rules .contract-paper {
+  min-height: 165px;
+  height: 165px;
 
+  padding: 22px 24px 18px;
+
+  overflow: hidden;
+}
+
+/* NUMBER */
+
+.player-contract-rules .contract-paper > strong {
+  font-size: 28px;
+  line-height: 1;
+}
+
+/* TITLE */
+
+.player-contract-rules .contract-paper h3 {
+  margin-top: 8px;
+
+  font-size: 11px;
+  line-height: 1.15;
+}
+
+/* DESCRIPTION */
+
+.player-contract-rules .contract-paper p {
+  margin-top: 12px;
+
+  font-size: 8px;
+  line-height: 1.5;
+}
+
+/* SMALL WATERMARK */
+
+.player-contract-rules .contract-paper::before {
+  font-size: 48px;
+}
+
+/* FAIR PLAY AREA */
+
+.contract-fair-play {
+  min-height: 35px;
+}
+
+/* FULL RULE LINK */
+
+.contract-full-rules-link {
+  margin-top: 0;
+}
 .contract-paper {
   width: 100%;
 
